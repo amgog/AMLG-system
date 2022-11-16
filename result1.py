@@ -357,7 +357,7 @@ class Ui_Dialog(QtWidgets.QMainWindow):
         self.plot.setText(_translate("Dialog", "画图"))
 
     def show_init(self):
-        global a, dataset
+        global a, dataset, c
         # self.signal2.connect(self.print_val)
         a = readdata.sum_excel_file(dataset)
         self.cb1.clear()
@@ -382,6 +382,8 @@ class Ui_Dialog(QtWidgets.QMainWindow):
         self.textEdit.setText(r[0])
         self.textEdit_2.setText(r[1])
         self.textEdit_3.setText(r[2])
+        self.cb1.setCurrentText(c[0])
+        self.cb2.setCurrentText(c[1])
         self.cb3.setText(c[2])
         self.cb4.setText(c[3])
         self.cb5.setText(c[4])
